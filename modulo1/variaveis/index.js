@@ -24,7 +24,7 @@ console.log(a, b, c) // 10 10 12
 /* Exercício de interpretação 3 */
 
 let p = prompt("Quantas horas você trabalha por dia?") // workday
-let t = prompt("Quanto você recebe por dia?") // hourlyWage
+let t = prompt("Quanto você recebe por dia?") // dailyWage
 alert(`Voce recebe ${t/p} por hora`)
 
 /* Exercício de escrita de código 1 */
