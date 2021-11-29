@@ -19,10 +19,44 @@ c = a
 b = c
 a = b
 
-console.log(a, b, c) // 10 10 10
+console.log(a, b, c) // 10 10 12
 
 /* Exercício de interpretação 3 */
 
 let p = prompt("Quantas horas você trabalha por dia?") // workday
 let t = prompt("Quanto você recebe por dia?") // hourlyWage
 alert(`Voce recebe ${t/p} por hora`)
+
+/* Exercício de escrita de código 1 */
+
+let aName;
+let anAge;
+
+console.log(typeof aName, typeof anAge); // até aqui, as variáveis foram somente inicializadas, nenhum tipo/valor a elas foi atribuído
+
+aName = prompt("What's your name?");
+anAge = prompt("How old are you?");
+
+console.log(typeof aName, typeof anAge); // Dessa vez, atribuímos os retornos do método `prompt` com os valores (string).
+console.log(`Olá ${aName}, você tem ${anAge} anos.`);
+
+/* Exercício de escrita de código 2 */ 
+
+let warmWeather = prompt("Faz calor hoje onde você mora?");
+let whiteTShirt = prompt("Está usando camisa branca?");
+let sunscreen = prompt("Tem protetor solar?");
+
+console.log("Faz calor hoje onde você mora?", warmWeather);
+console.log("Está usando camisa branca?", whiteTShirt);
+console.log("Tem protetor solar?", sunscreen);
+
+/* Exercício de escrita de código 3 */
+
+let a = 10;
+let b = 25;
+let c = a;
+
+a = b;
+b = c;
+
+console.log(a, b);
