@@ -60,3 +60,11 @@ a = b;
 b = c;
 
 console.log(a, b);
+
+/* Desafio */
+
+const dogsAge = Number(prompt('Qual é a idade do seu cãozinho?')) * 16 + 31; // https://www.bbc.com/future/article/20200106-how-to-calculate-your-dogs-real-age
+const yourAge = Number(prompt('Qual é a sua idade?'));
+
+console.log(`1. O primeiro número somado ao segundo número resulta em: ${dogsAge + yourAge}.`);
+console.log(`2. O primeiro número multiplicado pelo segundo número resulta em: ${dogsAge * yourAge}.`);
