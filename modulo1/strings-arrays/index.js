@@ -62,3 +62,17 @@ console.log(listaDeTarefas)
 listaDeTarefas.splice(Number(prompt('Qual tarefa (0, 1, 2) deseja apagar?')), 1)
 
 console.log(listaDeTarefas)
+
+/* Desafios */
+
+// Exercício 1
+
+const frase2 = prompt("Digite uma frase")
+
+console.log(frase2.split(' '))
+
+// Exercício 2
+
+let frutas = ["Banana", "Morango", "Abacaxi", "Laranja", "Ameixa"]
+
+console.log(frutas.indexOf('Abacaxi'), frutas.length)
