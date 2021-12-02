@@ -77,7 +77,7 @@ function lengthUpperCase(mensagem) {
 console.log(sum(11, 13));
 console.log(greaterThan(11, 13));
 console.log(isEven(13));
-console.log(lengthUpperCase("Essa string contém 33 caracteres."));
+lengthUpperCase("Essa string contém 33 caracteres.");
 
 // Exercício 3
 
