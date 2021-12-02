@@ -103,3 +103,20 @@ console.log(`
     Multiplicação: ${multiply(numX, numY)}
     Divisão: ${divide(numX, numY)}
 `);
+
+/* Desafios */
+
+// Exercício 1
+
+const log = (msg) => console.log(msg);
+const logSum = (a, b) => log(a + b);
+
+logSum(2, 3);
+
+// Exercício 2
+
+function hypotenuse(legA, legB) {
+  return Math.hypot(legA, legB);
+}
+
+log(hypotenuse(2, 5));
