@@ -160,3 +160,54 @@ sacolao(laranja);
 sacolao(limao);
 
 console.log(carrinho);
+
+/* Desafios */
+
+// Exercício 1
+
+function profile() {
+  let user = {
+    userName: prompt("Qual é seu nome?"),
+    userAge: prompt("Qual é sua idade?"),
+    userOccupation: prompt("Qual é sua profissão?"),
+  };
+
+  console.log(user);
+  console.log(typeof user);
+}
+
+profile();
+
+// Exercício 2
+
+let jumanji = {
+  name: "Jumanji",
+  releaseYear: 1995,
+};
+
+let harryPotter = {
+  name: "Harry Potter",
+  releaseYear: "2008",
+};
+
+function compareMovieReleases(movie1, movie2) {
+  return `
+        O primeiro filme foi lançado antes do segundo? ${
+          movie1.releaseYear < movie2.releaseYear
+        }
+        O primeiro filme foi lançado no mesmo ano do segundo? ${
+          movie1.releaseYear === movie2.releaseYear
+        }
+  `;
+}
+
+console.log(compareMovieReleases(jumanji, harryPotter));
+
+// Exercício 3
+
+function estoqueSacolao(fruit) {
+  fruit.disponibilidade = !fruit.disponibilidade;
+  return fruit;
+}
+
+console.log(estoqueSacolao(limao));
