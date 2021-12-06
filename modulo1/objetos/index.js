@@ -86,3 +86,77 @@ console.log(minhaFuncao(pessoa, "altura")); // undefined
  * um valor inexistente, "indefinido"; ao objeto, não foi definida a propriedade
  * `altura`.
  */
+
+/* Exercícios de escrita de código */
+
+// Exercício 1
+
+let obj1 = {
+  nome: "Mero Objeto",
+  apelidos: ["coisa", "troço", "negócio"],
+};
+
+function printSalutation(obj) {
+  console.log(
+    `Eu sou ${obj.nome}, mas pode me chamar de: ${obj.apelidos[0]}, ${obj.apelidos[1]} ou ${obj.apelidos[2]}`
+  );
+}
+
+printSalutation(obj1);
+
+let obj2 = {
+  ...obj1,
+  apelidos: ["simplão", "modesto", "treco"],
+};
+
+printSalutation(obj2);
+
+// Exercício 2
+
+let obj3 = {
+  nome: "A",
+  idade: 23,
+  profissao: "Alinhador",
+};
+
+let obj4 = {
+  nome: "B",
+  idade: 21,
+  profissao: "Desalinhador",
+};
+
+function expandObj(obj) {
+  return [...Object.values(obj), obj.profissao.length];
+}
+
+console.log(expandObj(obj3));
+console.log(expandObj(obj4));
+
+// Exercício 3
+
+let carrinho = [];
+
+let manga = {
+  nome: "manga",
+  disponibilidade: true,
+};
+
+let laranja = {
+  nome: "laranja",
+  disponibilidade: true,
+};
+
+let limao = {
+  nome: "limao",
+  disponibilidade: true,
+};
+
+function sacolao(fruit) {
+  carrinho.push(fruit);
+}
+
+sacolao(manga);
+sacolao(laranja);
+sacolao(limao);
+
+console.log(carrinho);
