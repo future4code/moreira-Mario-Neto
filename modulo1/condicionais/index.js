@@ -124,7 +124,65 @@ const ticketPrice = prompt(
 );
 
 if (movieGenre == "fantasia" && ticketPrice < 15) {
-  console.log("Bom filme!");
+  const snack = prompt("Qual lanchinho você vai querer?");
+  console.log(`
+    Bom filme!
+    Aproveite o seu ${snack}
+  `);
 } else {
   console.log("Escolha outro filme :(");
 }
+
+/* Desafios */
+
+// Exercício 1
+// reescrito acima
+
+// Exercício 2
+
+const dollar = 4.1;
+const pricing = {
+  SF: [1320, 880, 550, 220],
+  DT: [660, 440, 330, 170],
+  FI: [1980, 1320, 880, 330],
+};
+
+const buyerName = prompt("Nome completo");
+const game = prompt(
+  "Tipo de jogo: IN (internacional) ou DO (doméstico)"
+).toUpperCase();
+const season = prompt(
+  "Etapa do jogo: SF (semi-final), DT (decisão de terceiro lugar) ou FI (final)"
+).toUpperCase();
+const category = Number(prompt("1, 2, 3 ou 4"));
+const ticketCount = Number(prompt("Quantidade de ingressos:"));
+
+let unitary = pricing[season][category - 1];
+
+const purchase = {
+  buyerName,
+  game: (game == "IN" && "Internacional") || (game == "DO" && "Nacional"),
+  season:
+    (season == "SF" && "Semi-final") ||
+    (season == "DT" && "Decisão de terceiro lugar") ||
+    (season == "FI" && "Final"),
+  category,
+  ticketCount,
+  unitary: game == "IN" ? unitary / dollar : unitary,
+  total: unitary * ticketCount,
+  currency: game == "IN" ? "US$" : "R$",
+};
+
+let purchaseDetails = `
+    ---Dados da compra---
+    Nome do cliente: ${purchase.buyerName}
+    Tipo do jogo: ${purchase.game}
+    Etapa do jogo: ${purchase.season}
+    Categoria: ${purchase.category}
+    Quantidade de Ingressos: ${purchase.ticketCount} ingressos
+    ---Valores---
+    Valor do ingresso: ${purchase.currency} ${purchase.unitary}
+    Valor total: ${purchase.currency} ${purchase.total}
+`;
+
+console.log(purchaseDetails);
