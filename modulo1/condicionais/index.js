@@ -2,14 +2,14 @@
 
 // Exercício 1
 
-/* const respostaDoUsuario = prompt("Digite o número que você quer testar");
+const respostaDoUsuario = prompt("Digite o número que você quer testar");
 const numero = Number(respostaDoUsuario);
 
 if (numero % 2 === 0) {
   console.log("Passou no teste.");
 } else {
   console.log("Não passou no teste.");
-} */
+}
 
 /**
  * O código acima avalia se um número é par ou não através do resto da
@@ -76,3 +76,55 @@ console.log(mensagem);
  * do if statement, fora do escopo global, onde ocorre a passagem
  * da variável mensagem para o console.log.
  */
+
+/* Exercícios de escrita de código */
+
+// Exercício 1
+
+let userAge = Number(prompt("Qual é a sua idade?"));
+
+if (userAge > 18) {
+  console.log("Você pode dirigir.");
+} else {
+  console.log("Você não pode dirigir.");
+}
+
+// Exercício 2
+
+let shift = prompt(
+  "Qual é o seu shift? (M) Matutino, (V) Vespertino ou (N) Noshift?"
+);
+
+if (shift == "M") {
+  console.log("Bom dia!");
+} else if (shift == "V") {
+  console.log("Boa tarde!");
+} else if (shift == "N") {
+  console.log("Boa noite!");
+}
+
+// Exercício 3
+
+switch (shift) {
+  case "M":
+    console.log("Bom dia!");
+    break;
+  case "V":
+    console.log("Boa tarde!");
+    break;
+  default:
+    console.log("Boa noite!");
+}
+
+// Exercício 4
+
+const movieGenre = prompt("Qual gênero de filme você quer assistir?");
+const ticketPrice = prompt(
+  "Qual é o preço máximo do ingresso que você topa pagar?"
+);
+
+if (movieGenre == "fantasia" && ticketPrice < 15) {
+  console.log("Bom filme!");
+} else {
+  console.log("Escolha outro filme :(");
+}
