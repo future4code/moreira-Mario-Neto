@@ -125,3 +125,43 @@ const smallest = sortedOriginalArray[0];
 const greatest = sortedOriginalArray[sortedOriginalArray.length - 1];
 
 console.log(`O maior número é ${greatest} e o menor é ${smallest}`);
+
+/* Desafios */
+
+// Exercício 1
+
+guessingGame(false);
+
+// Exercício 2
+
+guessingGame(true);
+
+function guessingGame(PC) {
+  const answer = PC
+    ? Math.floor(Math.random() * 100)
+    : Number(prompt("Jogador 1, insira um número:"));
+  let guess;
+  let tries = 0;
+
+  console.log("Vamos jogar!");
+
+  while (guess !== answer) {
+    guess = Number(
+      prompt(
+        `Jogador${PC ? "" : " 2"}, adivinhe o número que o ${
+          PC ? "computador gerou" : "Jogador 1 pensou"
+        }`
+      )
+    );
+    console.log(`O número chutado foi: ${guess}`);
+    tries++;
+
+    if (guess !== answer) {
+      console.log(`Errrrrrrrou, é ${guess > answer ? "menor" : "maior"}`);
+      continue;
+    }
+
+    console.log("Acertou!!");
+    console.log(`O número de tentativas foi: ${tries}`);
+  }
+}
