@@ -63,3 +63,65 @@ while (quantidadeAtual < quantidadeTotal) {
  * ***
  * ****
  */
+
+/* Exercícios de escrita de código */
+
+// Exercício 1
+
+const pets = Math.abs(Number(prompt("Quantos bichos de estimação você tem?")));
+const petNames = [];
+
+if (pets > 0) {
+  for (let i = 1; i <= pets; i++) {
+    petNames.push(prompt(`Qual é o nome do #${i} pet?`));
+  }
+  console.log(petNames);
+} else {
+  console.log("Que pena! Você pode adotar um pet!");
+}
+
+// Exercício 2
+
+let arrayOriginal = [];
+
+for (let i = 0; i < 10; i++) {
+  arrayOriginal.push(Math.floor(Math.random() * 100));
+  console.log(arrayOriginal[i]);
+}
+
+for (let i = 0; i < 10; i++) {
+  console.log(arrayOriginal[i] / 10);
+}
+
+let evens = [];
+for (let i = 0; i < 10; i++) {
+  if (arrayOriginal[i] % 2 == 0) {
+    evens.push(arrayOriginal[i]);
+  }
+}
+
+console.log(evens);
+
+let indexedStrings = [];
+for (let i = 0; i < arrayOriginal.length; i++) {
+  indexedStrings.push(`O elemento index ${i} é: ${arrayOriginal[i]}`);
+}
+
+console.log(indexedStrings);
+
+let sortedOriginalArray = [...arrayOriginal];
+
+for (let i = sortedOriginalArray.length - 1; i > 0; i--) {
+  for (let j = 0; j < i; j++) {
+    const [curr, next] = sortedOriginalArray.slice(j, j + 2);
+    if (curr > next) {
+      sortedOriginalArray[j] = next;
+      sortedOriginalArray[j + 1] = curr;
+    }
+  }
+}
+
+const smallest = sortedOriginalArray[0];
+const greatest = sortedOriginalArray[sortedOriginalArray.length - 1];
+
+console.log(`O maior número é ${greatest} e o menor é ${smallest}`);
