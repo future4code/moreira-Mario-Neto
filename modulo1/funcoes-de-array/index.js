@@ -116,3 +116,25 @@ console.log(ype);
 
 const promoYpe = ype.map((p) => `Compre ${p.nome} por ${p.preco}`);
 console.log(promoYpe);
+
+/* Desafios */
+
+// Exercício 1
+
+const pokemons = [
+  { nome: "Bulbasaur", tipo: "grama" },
+  { nome: "Bellsprout", tipo: "grama" },
+  { nome: "Charmander", tipo: "fogo" },
+  { nome: "Vulpix", tipo: "fogo" },
+  { nome: "Squirtle", tipo: "água" },
+  { nome: "Psyduck", tipo: "água" },
+];
+
+const alphabetic = mapBy(pokemons, "nome").sort();
+console.log(alphabetic);
+
+const types = pokemons
+  .map((p) => p.tipo)
+  .filter((t, i, arr) => !arr.slice(0, i).includes(t));
+
+console.log(types);
